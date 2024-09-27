@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+body {
+    background-color: black;
+    background-image: url(/assests/images/home.png);
+    background-repeat:no-repeat;
+}
+#container {
+    margin: 10px 10%;
+    height:100vh;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+}
+nav ul li a::after {
+    content:'';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition-duration: 0.5s;
+} 
+nav ul li a:hover::after {
+    width:100%;
+}
+a:hover {
+    color: red;
+    transition: all;
+    transition-duration: 1s;
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    font-weight: 600;
+}
+.header-text span {
+    color: red;
+}
+#about {
+    height: 100vh;
+    margin-left: 8%;
+}
+.about-image {
+    margin: 50px 10%;
+    width:50px;
+    margin-top: 40%;
+    border-radius: 50%;
+    border: 2px solid red;
+    width: 100%;
+} 
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col1, .col2 {
+    flex: 1;
+    padding: 10px;
+}
+.col1 {
+    max-width: 40%; /* Restricts image column width */
+    padding-right: 50px;
+}
+.col2 {
+    max-width: 55%; /* Restricts text column width */
+    text-align: left;
+    padding-right: 150px;
+    font-weight: 300;
+}
+.sub-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: white;
+}
+.tab-titles {
+    display:flex;
+    justify-content: space-evenly;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width:0;
+    height: 3px;
+    background-color: red;
+    position:absolute;
+    left: 0;
+    bottom: -8px;
+    transition:0.5s;
+}
+.tab-links.active-link::after {
+    width:50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 20px 0px;
+    margin-left: 70px;
+}
+.tab-contents ul li span {
+    color: red;
+    font-size:14px;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+.spacing {
+    height: 116px;
+}
+/* ----------------------Projects------------------ */
+#projects {
+    padding: 30px 0;
+    margin: 40px 15%;
+    margin-top: 130px;
+    height: 100vh;
+}
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+.projects-list div {
+    background: #262626;
+    padding:40px;
+    font-size:13px;
+    font-weight:300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+    border: 2px solid pink;
+}
+.projects-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.projects-list div h2 {
+    font-size: 30px;
+    font-weight:500;
+    margin-bottom: 15px;
+}
+.projects-list div a {
+    text-decoration: none;
+    color: pink;
+    font-size:20px;
+    margin-top: 20px;
+    display:inline-block;
+}
+.projects-list div a:hover {
+    color:#ff004f;
+}
+.projects-list div:hover {
+    background: #ff004f;
+    transform:translateY(-10px);
+}
+/* ---------------Contact----------------- */
+.contact-left {
+    margin-left: 10%;
+    flex-basis: 35%;
+}
+.contact-right {
+    flex-basis: 50%;
+}
+.contact-left p {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.social-icons {
+    margin-left: 10px;
+}
+.contact-left p i {
+    color: pink;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.social-icons a i {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    color: white;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover i {
+    color: red;
+    transform: translateY(-5px);
+}
+.btn{
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #ff004f;
+    font-size:medium;
+    width: 150px;
+    height: 40px;
+    border-radius: 5%;
+}
+.contact-right form {
+    width:70%;
+}
+form input, form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background: #262626;
+    padding:15px;
+    margin:15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-radius:6px;
+}
+form .btn {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor:poi
+}
+.copyright {
+    text-align: center;
+    align-content: center;
+    margin-top:20px;
+    background-color: #262626;
+    width: 100%;
+    font-weight:300;
+    height: 50px;
+}
+.copyright i {
+    color:red;
+}
+/* ------------------Responsive------------------- */
+nav .fa-solid {
+    display:none;
+}
+@media only screen and (max-width: 600px){
+    nav ul li a:hover {
+        color:white;
+    }
+    nav {
+        width: 40vh;
+    }
+    body{
+        background-image: url(/assests/images/Mobile-home.png);
+        background-size: contain;
+        background-position-x: right;
+        width: 60%;
+    }
+    .header-text {
+        margin-top:100%;
+        font-size:15px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fa-solid {
+        display:block;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    nav ul {
+        background: #ff004f;
+        position:fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position:absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title {
+        width:300px;
+        font-size: 40px;
+    }
+    .about-image {
+        width: 35vh;
+        margin-top: 70px;
+        margin-left: 10px;
+    }
+    .col2 p {
+        width: 300px;
+        text-align: center;
+    }
+    #projects .container {
+        margin-top: 450px;
+    }
+    .tab-contents ul li {
+        width: 250px;
+    }
+    #projects .container h1 {
+        font-size: 30px;
+        width: 300px;
+    }
+    .row .contact-left h1 {
+        margin-top: 1450px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-right input text-area {
+        margin-right: 220px;
+    }
+    .contact-right form {
+        width: 35vh;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .copyright {
+        width: 35vh;
+        margin-left: 30px;
+    }
+}
