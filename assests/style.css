@@ -8,7 +8,7 @@
 }
 body {
     background-color: black;
-    background-image: url(/assests/images/home.png);
+    background-image: url(assests/images/home.png);
     background-repeat:no-repeat;
 }
 #container {
